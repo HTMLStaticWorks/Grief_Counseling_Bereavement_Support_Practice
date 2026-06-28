@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewLeaf | Login</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="overflow: hidden;"> <!-- No scroll per prompt -->
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <a href="index.html" class="nav-brand">
+        <i class="ph ph-leaf"></i>
+        NewLeaf
+      </a>
+
+      <h2 style="font-size: var(--size-h4); margin-bottom: 24px;">Client Login</h2>
+
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        
+        <div style="text-align: right; margin-bottom: 24px;">
+          <a href="#" style="font-size: var(--size-caption);">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Login</button>
+      </form>
+
+      <div class="divider">or</div>
+
+      <div class="social-btns">
+        <button class="btn btn-ghost btn-full">
+          <i class="ph ph-google-logo"></i> Continue with Google
+        </button>
+        <button class="btn btn-ghost btn-full">
+          <i class="ph ph-envelope-simple"></i> Continue with Email Link
+        </button>
+      </div>
+
+      <p style="margin-top: 32px; font-size: var(--size-label);">
+        Don't have an account? <a href="register.html">Register here</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

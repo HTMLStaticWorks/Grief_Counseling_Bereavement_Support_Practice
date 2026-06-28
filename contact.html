@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewLeaf | Contact Us</title>
+  <meta name="description" content="Reach out to NewLeaf for confidential grief counseling and support.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Drawer Menu -->
+  <div class="drawer-overlay"></div>
+  <div class="drawer">
+    <button class="icon-btn drawer-close" aria-label="Close menu">
+      <i class="ph ph-x"></i>
+    </button>
+    <ul class="drawer-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="services.html" class="nav-link">Our Approach</a></li>
+      <li><a href="resources.html" class="nav-link">Resources</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      <li><a href="login.html" class="nav-link">Login</a></li>
+    </ul>
+    <div class="drawer-actions">
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <i class="ph ph-leaf"></i>
+        NewLeaf
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="services.html" class="nav-link">Our Approach</a></li>
+        <li><a href="resources.html" class="nav-link">Resources</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="login.html" class="nav-link" style="font-weight: 510; color: var(--color-primary);">Login</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn hamburger" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="section section-alt" style="padding-bottom: calc(var(--spacing-base) * 6);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 0;">
+        <h1 style="font-size: var(--size-h2);">Reach Out</h1>
+        <p class="lead">We are here to listen. Taking the first step is often the hardest, but you don't have to do it alone.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: start; gap: calc(var(--spacing-base) * 8);">
+        
+        <!-- Contact Form Side -->
+        <div>
+          <div class="privacy-note">
+            <i class="ph ph-shield-check" style="font-size: 1.5rem; color: var(--color-primary);"></i>
+            <div>
+              <strong>Your privacy is our priority.</strong> Everything you share here is strictly confidential. We are bound by professional ethical codes and will never share your information.
+            </div>
+          </div>
+
+          <div id="formSuccessMsg" class="form-success-msg">
+            <i class="ph ph-check-circle" style="font-size: 2rem; margin-bottom: 8px;"></i><br>
+            Thank you for reaching out. We will be in touch within 1–2 business days.
+          </div>
+
+          <!-- FORMSPREE_ENDPOINT -->
+          <form id="contactForm" action="#" method="POST" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+              <div class="form-error">Please enter your full name.</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+              <div class="form-error">Please enter a valid email address.</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number (Optional)</label>
+              <input type="tel" id="phone" name="phone" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <label for="contact_method" class="form-label">Preferred Contact Method</label>
+              <select id="contact_method" name="contact_method" class="form-control" required>
+                <option value="">Please select...</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone call</option>
+                <option value="text">Text message</option>
+              </select>
+              <div class="form-error">Please select a preferred contact method.</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message (Share what you feel comfortable sharing)</label>
+              <textarea id="message" name="message" class="form-control" required></textarea>
+              <div class="form-error">Please enter your message.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="source" class="form-label">How did you hear about us?</label>
+              <input type="text" id="source" name="source" class="form-control">
+            </div>
+            
+            <div class="form-check">
+              <input type="checkbox" id="privacy" name="privacy" class="form-check-input" required>
+              <div>
+                <label for="privacy" class="form-label" style="font-weight: normal; margin-bottom: 0;">I understand this form is confidential and agree to the Privacy Policy.</label>
+                <div class="form-error">You must agree to the privacy policy to submit.</div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="ph ph-paper-plane-right"></i> Send a confidential message
+            </button>
+          </form>
+          
+          <!-- TELEHEALTH_BOOKING_WIDGET -->
+          <div style="margin-top: calc(var(--spacing-base) * 6); text-align: center;">
+            <p class="text-muted" style="margin-bottom: 16px;">Are you an existing client?</p>
+            <a href="login.html" class="btn btn-ghost">Go to Client Portal</a>
+          </div>
+        </div>
+
+        <!-- Info & Map Side -->
+        <div>
+          <div class="card" style="align-items: flex-start; text-align: left; background: var(--bg-surface); border: 1px solid var(--border-color); box-shadow: none;">
+            <h3 style="margin-bottom: 24px;">Office Details</h3>
+            
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 24px; margin-bottom: 32px;">
+              <li style="display: flex; gap: 16px;">
+                <i class="ph ph-map-pin" style="font-size: 1.5rem; color: var(--color-primary);"></i>
+                <div>
+                  <strong>Address</strong><br>
+                  <span class="text-muted">123 Serenity Lane, Suite 200<br>Wellness City, CA 90210</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: 16px;">
+                <i class="ph ph-phone" style="font-size: 1.5rem; color: var(--color-primary);"></i>
+                <div>
+                  <strong>Phone</strong><br>
+                  <span class="text-muted">(555) 123-4567</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: 16px;">
+                <i class="ph ph-envelope" style="font-size: 1.5rem; color: var(--color-primary);"></i>
+                <div>
+                  <strong>Email</strong><br>
+                  <span class="text-muted">care@newleaf.example.com</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: 16px;">
+                <i class="ph ph-clock" style="font-size: 1.5rem; color: var(--color-primary);"></i>
+                <div>
+                  <strong>Office Hours</strong><br>
+                  <span class="text-muted">Monday – Friday: 9:00 AM – 6:00 PM<br>Saturday: By appointment only<br>Sunday: Closed</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- GOOGLE_MAPS_API_KEY -->
+            <div style="width: 100%; height: 300px; background-color: var(--color-primary-tint); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); overflow: hidden;">
+              <!-- Google Maps iframe placeholder -->
+              <div style="text-align: center; color: var(--color-primary);">
+                <i class="ph ph-map-trifold" style="font-size: 2rem; margin-bottom: 8px;"></i><br>
+                Interactive Map Placeholder
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 24px; display: inline-flex;">
+            <i class="ph ph-leaf"></i>
+            NewLeaf
+          </a>
+          <p class="text-muted" style="margin-bottom: 16px; max-width: 300px;">Providing a compassionate, safe space to navigate loss and find a gentle path forward.</p>
+          <p class="text-muted"><em>All communications are strictly confidential.</em></p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Approach</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Client Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="resources.html">Articles</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Therapy FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links text-muted">
+            <li style="display: flex; gap: 8px; align-items: center;"><i class="ph ph-envelope"></i> care@newleaf.example.com</li>
+            <li style="display: flex; gap: 8px; align-items: center;"><i class="ph ph-phone"></i> (555) 123-4567</li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;"><i class="ph ph-map-pin"></i> 123 Serenity Lane,<br>Suite 200,<br>Wellness City, CA 90210</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 NewLeaf Grief Counseling & Bereavement Support. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

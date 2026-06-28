@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewLeaf | Coming Soon</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Drawer Menu -->
+  <div class="drawer-overlay"></div>
+  <div class="drawer">
+    <button class="icon-btn drawer-close" aria-label="Close menu">
+      <i class="ph ph-x"></i>
+    </button>
+    <ul class="drawer-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="services.html" class="nav-link">Our Approach</a></li>
+      <li><a href="resources.html" class="nav-link">Resources</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="login.html" class="nav-link">Login</a></li>
+    </ul>
+    <div class="drawer-actions">
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <i class="ph ph-leaf"></i>
+        NewLeaf
+      </a>
+      
+      <div class="nav-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn hamburger" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero with countdown -->
+  <header class="hero" style="min-height: calc(100vh - 80px); display: flex; align-items: center; justify-content: center; text-align: center;">
+    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2041&q=80" alt="Gentle forest trail" class="hero-bg" loading="lazy">
+    <div class="hero-overlay"></div>
+    <div class="container" style="max-width: 600px; z-index: 2;">
+      <h1 style="margin-bottom: 24px;">Something beautiful is growing.</h1>
+      <p class="lead" style="margin-bottom: 48px;">We are preparing a gentle, compassionate space for your healing journey. We'll be ready to welcome you soon.</p>
+      
+      <div id="countdown" style="margin-bottom: 48px; color: var(--color-primary);"></div>
+      
+      <form action="#" method="POST" style="display: flex; gap: 16px; justify-content: center; max-width: 400px; margin: 0 auto; flex-wrap: wrap;">
+        <!-- MAILCHIMP_EMBED -->
+        <input type="email" name="email" class="form-control" placeholder="Enter your email" required style="flex: 1; min-width: 200px;">
+        <button type="submit" class="btn btn-primary">Notify me</button>
+      </form>
+    </div>
+  </header>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

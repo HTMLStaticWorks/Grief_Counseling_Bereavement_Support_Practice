@@ -1,0 +1,67 @@
+/* ==========================================================================
+   NEWLEAF - RTL Overrides
+   ========================================================================== */
+
+/* Typography & Layout */
+[dir="rtl"] body {
+  text-align: right;
+}
+
+[dir="rtl"] .section-header {
+  text-align: center;
+}
+
+[dir="rtl"] .lead {
+  text-align: center;
+}
+
+[dir="rtl"] .nav-brand {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+[dir="rtl"] .hero-content {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .accordion-header {
+  text-align: right;
+}
+
+[dir="rtl"] .article-card {
+  text-align: right;
+}
+
+/* Icons and Directional Margins */
+[dir="rtl"] .btn .ph,
+[dir="rtl"] .nav-brand .ph,
+[dir="rtl"] .privacy-note .ph {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+[dir="rtl"] .card-icon {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Drawer Menu Slides from Left */
+[dir="rtl"] .drawer {
+  right: auto;
+  left: -100%;
+  box-shadow: 4px 0 24px rgba(0,0,0,0.1);
+  transition: left 0.4s ease;
+}
+
+[dir="rtl"] .drawer.active {
+  left: 0;
+}
+
+[dir="rtl"] .drawer-close {
+  align-self: flex-start;
+}

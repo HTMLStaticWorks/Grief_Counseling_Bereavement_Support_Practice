@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewLeaf | Grief Counseling & Bereavement Support</title>
-  <meta name="description" content="NewLeaf provides compassionate, trauma-informed grief counseling and bereavement support. You don't have to walk this path alone.">
+  <title>NewLeaf | Alternative Home</title>
+  <meta name="description" content="NewLeaf provides compassionate, trauma-informed grief counseling and bereavement support.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,18 +16,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "NewLeaf Grief Counseling",
-    "description": "Compassionate, gentle online presence for a solo therapist or group practice specializing in grief and bereavement support.",
-    "url": "https://newleaf.example.com",
-    "logo": "https://newleaf.example.com/logo.png"
-  }
-  </script>
 </head>
 <body>
 
@@ -38,8 +26,8 @@
       <i class="ph ph-x"></i>
     </button>
     <ul class="drawer-menu">
-      <li><a href="index.html" class="nav-link active">Home</a></li>
-      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home2.html" class="nav-link active">Home 2</a></li>
       <li><a href="services.html" class="nav-link">Our Approach</a></li>
       <li><a href="resources.html" class="nav-link">Resources</a></li>
       <li><a href="blog.html" class="nav-link">Blog</a></li>
@@ -65,8 +53,8 @@
       </a>
       
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link active">Home 2</a></li>
         <li><a href="services.html" class="nav-link">Our Approach</a></li>
         <li><a href="resources.html" class="nav-link">Resources</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
@@ -88,44 +76,46 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2041&q=80" alt="Gentle forest trail with sunlight filtering through leaves" class="hero-bg" loading="lazy">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <h1>You don't have to walk this path alone.</h1>
-        <p>A safe, compassionate space to navigate loss, find renewal, and slowly turn a new page. We are here to support you at your own pace.</p>
-        <div class="hero-btns">
+  <!-- Split Hero Section -->
+  <header class="hero-split">
+    <div class="hero-split-content">
+      <div style="max-width: 500px; margin: 0 auto;">
+        <h1 style="animation: fadeInUp 1s 0.2s both ease-out;">Gentle guidance for heavy hearts.</h1>
+        <p class="text-muted" style="font-size: var(--size-lead); margin-bottom: 32px; animation: fadeInUp 1s 0.4s both ease-out;">A safe, compassionate space to navigate loss, find renewal, and slowly turn a new page. We are here to support you at your own pace.</p>
+        <div class="hero-btns" style="animation: fadeInUp 1s 0.6s both ease-out; display: flex; gap: 16px;">
           <a href="contact.html" class="btn btn-primary">Begin your journey</a>
-          <a href="resources.html" class="btn btn-ghost">Read resources</a>
+          <a href="about.html" class="btn btn-ghost">Meet our team</a>
         </div>
       </div>
     </div>
+    <div class="hero-split-image">
+      <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Gentle forest trail" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Soft misty mountains" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sunlight in woods" loading="lazy">
+    </div>
   </header>
 
-  <!-- Our Approach -->
+  <!-- Reordered Sections per prompt: Testimonials -> About -> Approach -> Resources -> CTA -->
+
+  <!-- Testimonials -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <h2>Our Approach</h2>
-        <p>We believe in honoring your unique journey with gentle, trauma-informed care.</p>
+        <h2>Stories of Hope</h2>
+        <p>Words from those who have walked this path before you.</p>
       </div>
       <div class="grid grid-3">
-        <div class="card">
-          <i class="ph ph-ear card-icon"></i>
-          <h3 class="card-title">Compassionate Listening</h3>
-          <p class="card-desc">Providing a safe, confidential environment where you can freely express your feelings without judgment.</p>
+        <div class="testimonial-card" style="background: var(--bg-page);">
+          <p class="testimonial-quote">"NewLeaf provided a safe harbor during the darkest time of my life. Their compassion is immeasurable."</p>
+          <div class="testimonial-author">— Michael</div>
         </div>
-        <div class="card card-alt">
-          <i class="ph ph-hands-clapping card-icon"></i>
-          <h3 class="card-title">Personalized Support</h3>
-          <p class="card-desc">Tailoring our sessions to meet your specific emotional needs and gently guiding you forward.</p>
+        <div class="testimonial-card" style="background: var(--bg-page);">
+          <p class="testimonial-quote">"I felt heard, validated, and gently guided. I didn't feel like a patient; I felt like a human being in pain."</p>
+          <div class="testimonial-author">— Sarah</div>
         </div>
-        <div class="card">
-          <i class="ph ph-heartbeat card-icon"></i>
-          <h3 class="card-title">Grief-Informed Therapy</h3>
-          <p class="card-desc">Utilizing evidence-based practices designed specifically for those navigating deep loss and trauma.</p>
+        <div class="testimonial-card" style="background: var(--bg-page);">
+          <p class="testimonial-quote">"The group support sessions helped me realize I wasn't alone. It's a truly safe and grounded environment."</p>
+          <div class="testimonial-author">— David</div>
         </div>
       </div>
     </div>
@@ -135,24 +125,51 @@
   <section class="section">
     <div class="container">
       <div class="grid grid-2" style="align-items: center;">
-        <div>
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1288&q=80" alt="Therapist smiling gently in a softly lit room" style="border-radius: var(--radius); box-shadow: var(--shadow);" loading="lazy">
-        </div>
         <div style="padding: calc(var(--spacing-base) * 4);">
           <h2>About the Practice</h2>
           <p class="lead" style="text-align: left;">Creating a sanctuary for healing.</p>
           <p>My name is Dr. Sarah Jenkins, and I have dedicated the past 15 years to helping individuals and families navigate the complexities of bereavement. I understand that grief is not a problem to be solved, but a journey to be witnessed.</p>
           <p>At NewLeaf, our mission is to offer a supportive holding environment. Here, you are free to bring your whole self—your sorrow, your memories, and your hopes.</p>
           <div style="margin-top: calc(var(--spacing-base) * 4);">
-            <a href="about.html" class="btn btn-ghost">Meet the team</a>
+            <a href="about.html" class="btn btn-ghost">Read full story</a>
           </div>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1288&q=80" alt="Therapist smiling gently in a softly lit room" style="border-radius: var(--radius); box-shadow: var(--shadow);" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Approach</h2>
+        <p>We believe in honoring your unique journey with gentle, trauma-informed care.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card" style="background: var(--bg-page);">
+          <i class="ph ph-ear card-icon"></i>
+          <h3 class="card-title">Compassionate Listening</h3>
+          <p class="card-desc">Providing a safe, confidential environment where you can freely express your feelings without judgment.</p>
+        </div>
+        <div class="card" style="background: var(--bg-page);">
+          <i class="ph ph-hands-clapping card-icon"></i>
+          <h3 class="card-title">Personalized Support</h3>
+          <p class="card-desc">Tailoring our sessions to meet your specific emotional needs and gently guiding you forward.</p>
+        </div>
+        <div class="card" style="background: var(--bg-page);">
+          <i class="ph ph-heartbeat card-icon"></i>
+          <h3 class="card-title">Grief-Informed Therapy</h3>
+          <p class="card-desc">Utilizing evidence-based practices designed specifically for those navigating deep loss and trauma.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Resource Highlights -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="section-header">
         <h2>Resource Highlights</h2>
@@ -168,7 +185,7 @@
               <span>4 min read</span>
             </div>
             <h3 class="article-title">Understanding the Waves of Grief</h3>
-            <p class="article-excerpt">Grief rarely follows a straight line. Discover how to navigate the unexpected waves with self-compassion and patience.</p>
+            <p class="article-excerpt">Grief rarely follows a straight line. Discover how to navigate the unexpected waves with self-compassion.</p>
             <a href="blog-single.html" style="font-weight: var(--weight-label); margin-top: 16px; display: inline-block;">Read Article <i class="ph ph-arrow-right" style="vertical-align: middle;"></i></a>
           </div>
         </article>
@@ -194,38 +211,14 @@
               <span>5 min read</span>
             </div>
             <h3 class="article-title">Talking to Children About Loss</h3>
-            <p class="article-excerpt">Guiding young minds through the concept of death requires honesty, gentle reassurance, and age-appropriate language.</p>
+            <p class="article-excerpt">Guiding young minds through the concept of death requires honesty, gentle reassurance, and care.</p>
             <a href="blog-single.html" style="font-weight: var(--weight-label); margin-top: 16px; display: inline-block;">Read Article <i class="ph ph-arrow-right" style="vertical-align: middle;"></i></a>
           </div>
         </article>
 
       </div>
       <div style="text-align: center; margin-top: calc(var(--spacing-base) * 6);">
-        <a href="resources.html" class="btn btn-ghost">View all resources</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Stories of Hope</h2>
-        <p>Words from those who have walked this path before you.</p>
-      </div>
-      <div class="grid grid-3">
-        <div class="testimonial-card">
-          <p class="testimonial-quote">"NewLeaf provided a safe harbor during the darkest time of my life. Their compassion is immeasurable."</p>
-          <div class="testimonial-author">— Michael</div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">"I felt heard, validated, and gently guided. I didn't feel like a patient; I felt like a human being in pain."</p>
-          <div class="testimonial-author">— Sarah</div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">"The group support sessions helped me realize I wasn't alone. It's a truly safe and grounded environment."</p>
-          <div class="testimonial-author">— David</div>
-        </div>
+        <a href="resources.html" class="btn btn-primary">View all resources</a>
       </div>
     </div>
   </section>

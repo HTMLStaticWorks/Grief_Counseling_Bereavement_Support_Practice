@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewLeaf | Register</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="overflow: auto;"> <!-- Content is longer, might need scroll on small screens -->
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <a href="index.html" class="nav-brand">
+        <i class="ph ph-leaf"></i>
+        NewLeaf
+      </a>
+
+      <h2 style="font-size: var(--size-h4); margin-bottom: 24px;">Create an Account</h2>
+
+      <form id="registerForm" action="#" method="POST" novalidate>
+        <div class="form-group">
+          <label for="regName" class="form-label">Full Name</label>
+          <input type="text" id="regName" name="name" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail" class="form-label">Email Address</label>
+          <input type="email" id="regEmail" name="email" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword" class="form-label">Password (min 8 chars)</label>
+          <input type="password" id="regPassword" name="password" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regConfirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" id="regConfirmPassword" name="confirmPassword" class="form-control" required>
+        </div>
+        
+        <div class="form-check" style="text-align: left;">
+          <input type="checkbox" id="regTerms" name="terms" class="form-check-input" required>
+          <div>
+            <label for="regTerms" class="form-label" style="font-weight: normal; margin-bottom: 0;">I agree to the Terms & Conditions and Privacy Policy.</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Register</button>
+      </form>
+
+      <div class="divider">or</div>
+
+      <div class="social-btns">
+        <button class="btn btn-ghost btn-full">
+          <i class="ph ph-google-logo"></i> Continue with Google
+        </button>
+        <button class="btn btn-ghost btn-full">
+          <i class="ph ph-envelope-simple"></i> Continue with Email Link
+        </button>
+      </div>
+
+      <p style="margin-top: 32px; font-size: var(--size-label);">
+        Already have an account? <a href="login.html">Login here</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
