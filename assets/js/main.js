@@ -249,4 +249,25 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateCountdown, 1000);
   }
 
+  // 8. Password Visibility Toggle
+  const passwordToggles = document.querySelectorAll('.password-toggle');
+  passwordToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const wrapper = toggle.closest('.password-input-wrapper');
+      if (wrapper) {
+        const input = wrapper.querySelector('input');
+        const icon = toggle.querySelector('i');
+        if (input && icon) {
+          if (input.type === 'password') {
+            input.type = 'text';
+            icon.className = 'ph ph-eye-slash';
+          } else {
+            input.type = 'password';
+            icon.className = 'ph ph-eye';
+          }
+        }
+      }
+    });
+  });
+
 });
