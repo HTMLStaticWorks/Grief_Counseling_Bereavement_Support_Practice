@@ -15,10 +15,7 @@
   text-align: center;
 }
 
-[dir="rtl"] .nav-brand {
-  margin-right: 0;
-  margin-left: auto;
-}
+
 
 [dir="rtl"] .hero-content {
   margin-left: 0;
