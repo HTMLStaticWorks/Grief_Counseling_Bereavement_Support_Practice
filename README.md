@@ -53,7 +53,7 @@ The included JS will also handle dynamic toggling via the `rtl-toggle` button in
 - **Contact Form:** Update the `<form action="#">` in `contact.html` with your Formspree endpoint or backend URL.
 - **Newsletter:** Replace `<!-- MAILCHIMP_EMBED -->` in `coming-soon.html` with your Mailchimp action URL.
 - **Google Maps:** Replace the placeholder in `contact.html` where `<!-- GOOGLE_MAPS_API_KEY -->` is mentioned with your actual Google Maps iframe.
-- **Telehealth:** Place your client portal/booking widget link below the contact form where indicated.
+
 
 ## 🛠️ Testing Locally
 Since there are no complex build systems, you can simply open any `.html` file directly in your browser. However, for the best experience (and to avoid CORS issues if you add external fetch calls later), it is recommended to run a local web server (e.g. `npx serve` or using the VS Code Live Server extension).

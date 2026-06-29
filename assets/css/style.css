@@ -580,21 +580,23 @@ p {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background: rgba(255, 255, 255, 0.85);
   z-index: -1;
 }
 
 [data-theme="dark"] .hero-overlay {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 [dir="rtl"] .hero-content {
   margin-left: auto;
-  margin-right: 0;
+  margin-right: auto;
 }
 
 .hero h1 {
@@ -605,10 +607,13 @@ p {
   animation: fadeInUp 1s 0.4s both ease-out;
   font-size: var(--size-lead);
   color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .hero-btns {
   display: flex;
+  justify-content: center;
   gap: calc(var(--spacing-base) * 2);
   margin-top: calc(var(--spacing-base) * 4);
   animation: fadeInUp 1s 0.6s both ease-out;
@@ -788,12 +793,51 @@ textarea.form-control {
   font-size: var(--size-lead);
 }
 
+.footer-col .nav-brand {
+  display: flex !important;
+  margin-top: -6px !important;
+}
+
 .footer-links {
   list-style: none;
 }
 
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+[data-theme="dark"] .footer-links a:hover {
+  color: var(--color-accent);
+}
+
+
 .footer-links li {
   margin-bottom: calc(var(--spacing-base) * 1.5);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .footer-socials {
+    justify-content: center;
+    margin-bottom: 24px;
+  }
 }
 
 .footer-bottom {
@@ -1300,13 +1344,12 @@ html.theme-shrink::view-transition-new(root) {
     display: flex;
   }
 
-  .hero-split {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
+}
 
-  .hero-split-image {
-    height: 400px;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-split {
+    min-height: 650px;
+    height: 650px;
   }
 }
 
@@ -1334,8 +1377,36 @@ html.theme-shrink::view-transition-new(root) {
     text-align: center;
   }
 
+  .footer-links li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-col p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-col .nav-brand {
+    justify-content: center;
+  }
+
   .hero-btns {
     flex-direction: column;
+  }
+
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-split-image {
+    height: 400px;
+    order: 1;
+  }
+
+  .hero-split-content {
+    order: 2;
   }
 }
 
@@ -1519,6 +1590,7 @@ html.theme-shrink::view-transition-new(root) {
 
 /* About Body */
 .about-body {
+  grid-template-columns: repeat(2, 1fr);
   align-items: start;
   gap: calc(var(--spacing-base) * 8);
 }
@@ -1558,7 +1630,7 @@ html.theme-shrink::view-transition-new(root) {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .about-banner {
     aspect-ratio: 4 / 3;
   }
@@ -1648,6 +1720,7 @@ html.theme-shrink::view-transition-new(root) {
 
 .approach-step-content {
   flex: 1;
+  text-align: center;
 }
 
 .approach-icon {
@@ -1655,6 +1728,8 @@ html.theme-shrink::view-transition-new(root) {
   color: var(--color-primary);
   display: block;
   margin-bottom: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .approach-step-title {
@@ -1672,7 +1747,7 @@ html.theme-shrink::view-transition-new(root) {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .approach-step {
     grid-template-columns: 1fr;
   }
@@ -1687,5 +1762,149 @@ html.theme-shrink::view-transition-new(root) {
 
   .approach-step-number {
     font-size: 2.5rem;
+  }
+}
+
+/* About the Practice responsive grid reordering */
+.about-practice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--spacing-base) * 8);
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .about-practice-grid {
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing-base) * 4);
+  }
+  .about-practice-img-col {
+    order: 2;
+  }
+  .about-practice-text-col {
+    order: 1;
+    padding: 0 !important;
+  }
+}
+
+/* Our Approach responsive cards grid */
+.approach-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-base) * 4);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .approach-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .approach-cards-grid > *:nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    width: 100%;
+    max-width: calc(50% - (calc(var(--spacing-base) * 4) / 2));
+  }
+}
+
+@media (max-width: 767px) {
+  .approach-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Therapist Story Hover Effects */
+.therapist-story-img {
+  transition: var(--transition);
+}
+
+.therapist-story-img:hover {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.therapist-story-text ul li {
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.therapist-story-text ul li:hover {
+  color: var(--color-primary);
+  transform: scale(1.02);
+}
+
+/* Timeline Layout & RTL Support */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+  border-left: 2px solid var(--color-primary-tint);
+}
+
+.timeline-item {
+  margin-bottom: 32px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: -35px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+/* Hover Effects on Timeline */
+.timeline-item:hover {
+  transform: translateX(8px);
+}
+
+.timeline-item:hover .timeline-badge {
+  transform: scale(1.3);
+  background: var(--color-secondary);
+}
+
+/* RTL Mode Support */
+[dir="rtl"] .timeline {
+  padding-left: 0;
+  padding-right: 24px;
+  border-left: none;
+  border-right: 2px solid var(--color-primary-tint);
+}
+
+[dir="rtl"] .timeline-badge {
+  left: auto;
+  right: -35px;
+}
+
+[dir="rtl"] .timeline-item:hover {
+  transform: translateX(-8px);
+}
+
+/* Services page responsive cards grid */
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-base) * 6);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .services-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .services-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
